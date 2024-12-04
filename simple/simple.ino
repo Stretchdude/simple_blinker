@@ -32,6 +32,8 @@ void setup() {
 #endif
   // END of Trinket-specific code.
 
+  Serial.begin(115200);
+  Serial.println("I am alive!");
   pixels.begin();  // INITIALIZE NeoPixel strip object (REQUIRED)
 }
 
@@ -44,7 +46,10 @@ void loop() {
   };
   // The first NeoPixel in a strand is #0, second is 1, all the way up
   // to the count of pixels minus one.
+  Serial.println("next round.");
   for (int i = 0; i < NUMPIXELS; i++) {  // For each pixel...
+    Serial.print("next LED:");
+    Serial.println(i);
 
     pixels.setPixelColor(i, pixels.Color(1, 1, 1));
     pixels.show();        // Send the updated pixel colors to the hardware.
