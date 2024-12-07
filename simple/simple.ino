@@ -12,7 +12,7 @@
 #endif
 
 // Which pin on the Arduino is connected to the NeoPixels?
-#define PIN 8  // On Trinket or Gemma, suggest changing this to 1
+#define PIN 26  // On Trinket or Gemma, suggest changing this to 1
 
 // How many NeoPixels are attached to the Arduino?
 #define NUMPIXELS 4  // Popular NeoPixel ring size
@@ -22,8 +22,10 @@
 // strips you might need to change the third parameter -- see the
 // strandtest example for more information on possible values.
 
-//Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
-Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_RGB + NEO_KHZ800);
+// fl4ks strip
+Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
+//Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_RGB + NEO_KHZ800);
+//Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_BGR + NEO_KHZ800);
 
 #define DELAYVAL 500  // Time (in milliseconds) to pause between pixels
 
